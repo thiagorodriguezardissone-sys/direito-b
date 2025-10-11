@@ -8,3 +8,8 @@ if nome:
     st.write(nome.upper())
 if st.checkbox("Quer ver uma mensagem especial?"):
      st.success("✨ Continue estudando e você vai longe em programação! 🚀")
+import random
+
+if st.button("🎲 Gerar meu número da sorte"):
+    numero = random.randint(1, 100)
+    st.success(f"Seu número da sorte é: {numero} 🍀")
