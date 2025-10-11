@@ -16,5 +16,5 @@ if st.button(" Gerar meu número da sorte"):
 ano = st.number_input("Digite seu ano de nascimento:", 1900, 2025)
 if ano:
     st.write(f"Você tem {2025 - ano} anos. ")
-    st.image("https://images.unsplash.com/photo-1519389950473-47ba0277781c", caption="Codando o futuro", use_column_width=True)
+    st.image("https://images.unsplash.com/photo-1519389950473-47ba0277781c", caption="Programando o futuro", use_column_width=True)
 
