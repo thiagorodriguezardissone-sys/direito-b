@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import matplotlib.pyplot as plt
+import plotly.express as px
 
 df = pd.read_csv("deputados.csv")
 partidos = df["partido"].value_counts()
