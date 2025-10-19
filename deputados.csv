@@ -1,4 +1,21 @@
-﻿id,nome,cpf,partido,uf,nome_civil,sexo
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+st.title("📊 Gráfico de Deputados por Partido")
+
+df = pd.read_csv("deputados.csv")
+partidos = df["partido"].value_counts()
+
+fig, ax = plt.subplots()
+ax.bar(partidos.index, partidos.values, color="cornflowerblue")
+ax.set_title("Número de Deputados por Partido")
+ax.set_xlabel("Partido")
+ax.set_ylabel("Quantidade")
+
+st.pyplot(fig)
+
+id,nome,cpf,partido,uf,nome_civil,sexo
 204554,Abílio Santana,36607606504,PSC,BA,JOSE ABILIO SILVA DE SANTANA,M
 204521,Abou Anni,08496582841,UNIÃO,SP,PAULO SERGIO ABOU ANNI,M
 204379,Acácio Favacho,74287028287,MDB,AP,ACÁCIO DA SILVA FAVACHO NETO,M
@@ -512,3 +529,4 @@
 160632,Zé Silva,43422780653,SOLIDARIEDADE,MG,JOSÉ SILVA SOARES,M
 204517,Zé Vitor,07284044608,PL,MG,JOSE VITOR DE RESENDE AGUIAR,M
 160592,Zeca Dirceu,03098871946,PT,PR,JOSÉ CARLOS BECKER DE OLIVEIRA E SILVA,M
+
